@@ -1,0 +1,271 @@
+/* --------------------------------------------------------------- */
+/* Global variables */
+
+:root {
+    --dropdownSize: 15px;
+    --homeMobileTextMargin: 2vh;
+}
+
+/* --------------------------------------------------------------- */
+/* General CSS, applies to whole webpage */
+html {
+    display: flex;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 6vh 94vh;
+    grid-template-areas: 
+    "header"
+    "body";
+    background-color: #121212;
+    margin: auto;
+}
+
+.content {
+    grid-area: body;
+    transition: opacity 0.5s;
+    max-width: 1920px;
+    margin: 0 auto;
+    opacity: 100%;
+}
+
+/* --------------------------------------------------------------- */
+/* CSS for the navigaion bar on top */
+
+#navbar {
+    background: linear-gradient(7deg, #25F6FE, #D131A1);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: flex-end;
+    display: flex;
+    grid-area: header;
+    width: 100vw;
+    transition: height 0.5s ease-out 0s;
+}
+
+#navbar-ul-wrapper {
+    margin: auto 0;
+    grid-area: header;
+    max-width: 1920px;
+}
+
+@media screen and (min-width: 1920px){
+    #navbar-ul-wrapper {
+        margin-right: calc((100vw - 1920px) / 2);
+    }
+}
+
+#navbar-ul-wrapper ul {
+    margin: auto 0;
+    padding: 0 2vw;
+}
+
+#navbar-ul-wrapper ul li {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    display: inline;
+    padding: 0 1vw;
+    color: white;
+
+}
+
+.navbar-item {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-size: 2.25vh;
+}
+
+.navbar-item:after { 
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.navbar-item:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+#navbar-menu {
+    display: none;
+}
+
+/* --------------------------------------------------------------- */
+/* CSS for the home page section */
+
+@keyframes fade {
+    0% {opacity: 0%;}
+    10% {opacity: 100%;}
+    20% {opacity: 100%;}
+    30% {opacity: 0%;}
+    40% {opacity: 0%;}
+    50% {opacity: 0%;}
+    60% {opacity: 0%;}
+    70% {opacity: 0%;}
+    80% {opacity: 0%;}
+    90% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+
+@keyframes dropDown {
+    0% {transform: translateY(-15px);}
+    100% {transform: translateY(0);}
+}
+
+#home {
+    display: grid;
+    grid-template-columns: 10% 50% 40%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "left-margin left-content-hi right-content"
+    "left-margin left-content-lo right-content";
+}
+
+#home h1 {
+    font-family: 'Mukta', sans-serif;
+    font-size: 110px;
+    margin: auto 0 5vh 0;
+    color: white;
+    line-height: 10vh;
+    grid-area: left-content-hi;
+}
+
+#home p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 52px;
+    margin: 0 0 auto 0;
+    color: white;
+    line-height: 6vh;
+    grid-area: left-content-lo;
+}
+
+.fall-down-animation {
+    animation: dropDown 1s ease-out 0.05s 1;
+}
+
+#home-image {
+    grid-area: right-content;
+    display: flex;
+    color: white;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-page-icon {
+    font-size: 20vw;
+    position: absolute;
+}
+
+#desktop-windows {
+    animation: fade 6s linear 0s infinite;
+}
+
+#keyboard {
+    opacity: 0%;
+    animation: fade 6s linear 2s infinite;
+}
+
+#design-services {
+    opacity: 0%;
+    animation: fade 6s linear 4s infinite;
+}
+
+/* --------------------------------------------------------------- */
+/* CSS for the project page section */
+
+#projects {
+    opacity: 0;
+}
+
+/* --------------------------------------------------------------- */
+/* Mobile media query */
+
+@media screen and (max-width: 430px){
+
+    /* --------------------------------------------------------------- */
+    /* Home display  */
+
+    #home {
+        display: grid;
+        grid-template-rows: 30% 40% 30%;
+        grid-template-columns: none;
+        grid-template-areas: 
+            "top-content"
+            "mid-content"
+            "bot-content";
+    }
+
+    #home-text {
+        grid-area: top-content;
+        margin: 20% 13vw 0 10vw;
+    }
+
+    #home h1 {
+        font-size: 74px;
+        line-height: 9vh;
+        grid-area: top-content;
+        margin: auto 0 2vh 7vw;
+    }
+
+    #home p {
+        font-size: 19px;
+        line-height: 3vh;
+        grid-area: bot-content;
+        margin: 2vh 0 auto 7vw;
+    }
+
+    #home-image {
+        grid-area: mid-content;
+    }
+
+    .front-page-icon {
+        font-size: 50vw;
+    }
+
+    /* --------------------------------------------------------------- */
+    /* Navbar mobile */
+
+    #navbar {
+        z-index: 1;
+    }
+
+    .navbar-active {
+        height: 100vh;
+    }
+
+    #navbar-ul-wrapper {
+        margin: 0 0 auto 0;
+    }
+
+    #navbar-menu {
+        color: inherit;
+        display: inline-block;
+        position: relative;
+        font-size: 6vh;
+        margin: auto;
+    }
+
+    .navbar-item {
+        display: none;
+    }
+
+    .navbar-item-visible {
+        display: block;
+    }
+
+}
