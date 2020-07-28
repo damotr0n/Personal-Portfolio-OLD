@@ -31,7 +31,11 @@ function toggleHamburger(){
     
     if (media.matches) {
         var navbar = document.getElementById("navbar");
-        navbar.classList.toggle("navbar-active");
+        if (navbar.style.height !== "100vh") {
+            navbar.style.height = "100vh";
+        } else {
+            navbar.style.height = "inherit";
+        }
 
         var x = document.getElementById("navbar-item-wrapper")
         if (x.className === "topnav") {
