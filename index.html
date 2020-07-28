@@ -13,16 +13,14 @@
 
         <div id="navbar">
             <div id="navbar-ul-wrapper">
-                <ul>
+                <ul id="navbar-item-wrapper" class="topnav">
                     <li><a class="navbar-item" onclick="goHome()">Home</a></li>
                     <li><a class="navbar-item" onclick="goProjects()">Projects</a></li>
                     <li><a class="navbar-item" onclick="goContact()">Contact</a></li>
                 </ul>
-                <ul>
-                    <li><a onclick="toggleHamburger()">
-                        <span class="material-icons" id="navbar-menu">menu</span>
-                    </a></li>
-                </ul>
+                <a onclick="toggleHamburger()">
+                    <span class="material-icons" id="navbar-menu">menu</span>
+                </a>
             </div>  
         </div>
 
