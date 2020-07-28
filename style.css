@@ -43,7 +43,7 @@ body {
     display: flex;
     grid-area: header;
     width: 100vw;
-    transition: height 0.5s ease-out 0s;
+    transition: height 0.1s ease-out;
 }
 
 #navbar-ul-wrapper {
@@ -252,10 +252,7 @@ body {
 
     #navbar {
         z-index: 1;
-    }
-
-    .navbar-active {
-        height: 100vh;
+        height: 6vh;
     }
 
     #navbar-ul-wrapper {

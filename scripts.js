@@ -34,7 +34,7 @@ function toggleHamburger(){
         if (navbar.style.height !== "100vh") {
             navbar.style.height = "100vh";
         } else {
-            navbar.style.height = "inherit";
+            navbar.style.height = "6vh";
         }
 
         var x = document.getElementById("navbar-item-wrapper")
@@ -44,21 +44,5 @@ function toggleHamburger(){
             x.className = "topnav";
         }
     }
-
-    // var navbarItems = document.querySelectorAll(".navbar-item");
-    // for (let i = 0; i < navbarItems.length; i++) {
-    //     if (navbarItems[i].style.display === "none") {
-    //         navbarItems[i].style.display = "block";
-    //     } else {
-    //         navbarItems[i].style.display = "none";
-    //     }
-    // }
-
-    // var navbarItemWrapper = document.querySelector("#navbar-item-wrapper");
-    // if (navbarItemWrapper.style.display === "none"){
-    //     navbarItemWrapper.style.display = "block";
-    // } else {
-    //     navbarItemWrapper.style.display = "none";
-    // }
 
 }
