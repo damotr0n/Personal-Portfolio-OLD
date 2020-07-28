@@ -1,3 +1,5 @@
+var media = window.matchMedia("(max-width: 430px)");
+
 function goHome(){
     document.getElementById("home").style.opacity = "100%";
     document.getElementById("projects").style.opacity = "0%";
@@ -26,15 +28,17 @@ function goContact(){
 }
 
 function toggleHamburger(){
-     
-    var navbar = document.getElementById("navbar");
-    navbar.classList.toggle("navbar-active");
+    
+    if (media.matches) {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("navbar-active");
 
-    var x = document.getElementById("navbar-item-wrapper")
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+        var x = document.getElementById("navbar-item-wrapper")
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
 
     // var navbarItems = document.querySelectorAll(".navbar-item");
