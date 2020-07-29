@@ -4,6 +4,7 @@
 :root {
     --dropdownSize: 15px;
     --homeMobileTextMargin: 2vh;
+    --cardSize: 320px;
 }
 
 /* --------------------------------------------------------------- */
@@ -200,6 +201,53 @@ body {
 
 #projects {
     opacity: 0;
+}
+
+#projects h2 {
+    font-family: 'Mukta', sans-serif;
+    font-size: 90px;
+    color: white;
+}
+
+.card {
+    /* width: var(--cardSize); */
+    /* height: var(--cardSize); */
+    border: 1px solid white;
+    margin: 0 auto;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+
+}
+
+.card-title {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: auto 0;
+}
+
+.card-description {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: auto 0;
+}
+
+/* --------------------------------------------------------------- */
+/* CSS for the contact page section */
+
+#contact {
+    opacity: 0;
+}
+
+#contact h2 {
+    font-family: 'Mukta', sans-serif;
+    font-size: 90px;
+    color: white;
 }
 
 /* --------------------------------------------------------------- */
