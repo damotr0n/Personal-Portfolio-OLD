@@ -14,9 +14,9 @@
         <div id="navbar">
             <div id="navbar-ul-wrapper">
                 <ul id="navbar-item-wrapper" class="topnav">
-                    <li><a class="navbar-item" onclick="goHome()">Home</a></li>
-                    <li><a class="navbar-item" onclick="goProjects()">Projects</a></li>
-                    <li><a class="navbar-item" onclick="goContact()">Contact</a></li>
+                    <li><a class="navbar-item" onclick="changePage('home')">Home</a></li>
+                    <li><a class="navbar-item" onclick="changePage('projects')">Projects</a></li>
+                    <li><a class="navbar-item" onclick="changePage('contact')">Contact</a></li>
                 </ul>
                 <a onclick="toggleHamburger()">
                     <span class="material-icons" id="navbar-menu">menu</span>
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div id="projects" class="content">
+        <div id="projects" class="content hidden">
             <h2>Projects</h2>
             <div id="card-container">
                 <div class="card">
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div id="contact" class="content">
+        <div id="contact" class="content hidden">
             <h2>Contact</h2>
         </div>
 

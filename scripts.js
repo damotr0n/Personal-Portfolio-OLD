@@ -1,30 +1,18 @@
 var media = window.matchMedia("(max-width: 430px)");
 
-function goHome(){
-    document.getElementById("home").style.opacity = "100%";
-    document.getElementById("projects").style.opacity = "0%";
-    document.getElementById("contact").style.opacity = "0%";
-
-    toggleHamburger();
-
-}
-
-function goProjects(){
-    document.getElementById("home").style.opacity = "0%";
-    document.getElementById("projects").style.opacity = "100%";
-    document.getElementById("contact").style.opacity = "0%";
-
-    toggleHamburger();
-
-}
-
-function goContact(){
-    document.getElementById("home").style.opacity = "0%";
-    document.getElementById("projects").style.opacity = "0%";
-    document.getElementById("contact").style.opacity = "100%";
-
-    toggleHamburger();
-
+function changePage(pageName) {
+    var contents = document.getElementsByClassName("content");
+    for (let i = 0; i < contents.length; i++) {
+        if (contents[i].id === pageName) {
+            if (contents[i].classList.contains("hidden")) {
+                contents[i].classList.remove("hidden");
+            }
+        } else {
+            if (!contents[i].classList.contains("hidden")) {
+                contents[i].classList.add("hidden");
+            }
+        }
+    }
 }
 
 function toggleHamburger(){

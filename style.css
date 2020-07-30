@@ -30,6 +30,13 @@ body {
     max-width: 1920px;
     margin: 0 auto;
     opacity: 100%;
+    z-index: 1;
+}
+
+.hidden {
+    opacity: 0;
+    height: 0px;
+    z-index: 0;
 }
 
 /* --------------------------------------------------------------- */
@@ -200,7 +207,6 @@ body {
 /* CSS for the project page section */
 
 #projects {
-    opacity: 0;
     text-align: center;
 }
 
@@ -225,11 +231,12 @@ body {
     background-color: #292929;
     width: 300px;
     padding: 1em;
+    transition: all 0.1s ease-out;
 }
 
-/* .card-img {
-
-} */
+.card:hover {
+    transform: scale(1.1);
+}
 
 .card-title {
     font-family: 'Open Sans', sans-serif;
@@ -247,7 +254,6 @@ body {
 /* CSS for the contact page section */
 
 #contact {
-    opacity: 0;
 }
 
 #contact h2 {
