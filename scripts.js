@@ -5,14 +5,23 @@ function changePage(pageName) {
     for (let i = 0; i < contents.length; i++) {
         if (contents[i].id === pageName) {
             if (contents[i].classList.contains("hidden")) {
-                contents[i].classList.remove("hidden");
+                contents[i].classList.remove("hidden-display");
+                setTimeout(function () {
+                    contents[i].classList.remove("hidden");
+                }, 50);
             }
         } else {
             if (!contents[i].classList.contains("hidden")) {
                 contents[i].classList.add("hidden");
+                setTimeout(function () {
+                    contents[i].classList.add("hidden-display");
+                }, 500);
             }
         }
     }
+
+    toggleHamburger();
+
 }
 
 function toggleHamburger(){
