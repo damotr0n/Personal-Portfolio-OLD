@@ -30,8 +30,10 @@ function toggleHamburger(){
         var navbar = document.getElementById("navbar");
         if (navbar.style.height !== "100vh") {
             navbar.style.height = "100vh";
+            navbar.style.zIndex = "2";
         } else {
             navbar.style.height = "6vh";
+            navbar.style.zIndex = "0";
         }
 
         var x = document.getElementById("navbar-item-wrapper")

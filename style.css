@@ -220,6 +220,12 @@ body {
     margin: auto;
 }
 
+#projects p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-style: italic;
+}
+
 #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -228,9 +234,13 @@ body {
     align-items: center;
 }
 
+#card-container a {
+    text-decoration: none;
+    margin: 1em;
+}
+
 .card {
     border: 1px solid white;
-    margin: 1em;
     background-color: #292929;
     width: 300px;
     padding: 1em;
@@ -239,6 +249,11 @@ body {
 
 .card:hover {
     transform: scale(1.1);
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
 }
 
 .card-title {
@@ -251,6 +266,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: white;
     margin: auto 0;
+    font-style: normal;
 }
 
 /* --------------------------------------------------------------- */
@@ -308,6 +324,30 @@ body {
 
     .front-page-icon {
         font-size: 50vw;
+    }
+
+    /* --------------------------------------------------------------- */
+    /* Projects mobile */
+
+    #projects h2 {
+        font-size: 74px;
+    }
+
+    #card-container {
+        width: 90vw;
+    }
+
+    .card {
+        width: 60vw;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-img {
+        width: 75%;
+        height: 75%;
     }
 
     /* --------------------------------------------------------------- */
