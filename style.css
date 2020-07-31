@@ -42,11 +42,24 @@ body {
     display: none;
 }
 
+.subtitle {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-style: italic;
+}
+
+.main-title {
+    font-family: 'Mukta', sans-serif;
+    font-size: 90px;
+    color: white;
+    margin: auto;
+}
+
 /* --------------------------------------------------------------- */
 /* CSS for the navigaion bar on top */
 
 #navbar {
-    background: linear-gradient(7deg, #25F6FE, #D131A1);
+    background: linear-gradient(7deg, #b92b27, #1565c0);
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -213,20 +226,7 @@ body {
     text-align: center;
 }
 
-#projects h2 {
-    font-family: 'Mukta', sans-serif;
-    font-size: 90px;
-    color: white;
-    margin: auto;
-}
-
-#projects p {
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    font-style: italic;
-}
-
-#card-container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -234,20 +234,21 @@ body {
     align-items: center;
 }
 
-#card-container a {
+.card-container a {
     text-decoration: none;
     margin: 1em;
 }
 
 .card {
     border: 1px solid white;
+    border-radius: 20px;
     background-color: #292929;
     width: 300px;
     padding: 1em;
     transition: all 0.1s ease-out;
 }
 
-.card:hover {
+.card:hover, .card-contact:hover {
     transform: scale(1.1);
 }
 
@@ -273,12 +274,29 @@ body {
 /* CSS for the contact page section */
 
 #contact {
+    text-align: center;
 }
 
-#contact h2 {
-    font-family: 'Mukta', sans-serif;
-    font-size: 90px;
-    color: white;
+.card-contact {
+    width: 300px;
+    transition: all 0.1s ease-out;
+}
+
+.card-contact svg {
+    width: 100%;
+    height: auto;
+}
+
+.card-contact svg path {
+    fill: white;
+}
+
+.contact-card-container {
+    max-width: 1000px;
+}
+
+.contact-card-container a {
+    margin: 2em 4em;
 }
 
 /* --------------------------------------------------------------- */
@@ -329,11 +347,11 @@ body {
     /* --------------------------------------------------------------- */
     /* Projects mobile */
 
-    #projects h2 {
+    .main-title {
         font-size: 74px;
     }
 
-    #card-container {
+    .card-container {
         width: 90vw;
     }
 
@@ -396,6 +414,21 @@ body {
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    /* --------------------------------------------------------------- */
+    /* Contact mobile */
+
+    #contacts h2 {
+        font-size: 74px;
+    }
+
+    .contact-card-container a {
+        margin: 1em 4em;
+    }
+
+    .card-contact {
+        width: 220px;
     }
 
 }
