@@ -173,7 +173,7 @@ body {
     font-size: 110px;
     margin: auto 0 5vh 0;
     color: white;
-    line-height: 10vh;
+    line-height: 0.8em;
     grid-area: left-content-hi;
 }
 
@@ -183,7 +183,7 @@ body {
     font-size: 52px;
     margin: 0 0 auto 0;
     color: white;
-    line-height: 6vh;
+    line-height: 1.1em;
     grid-area: left-content-lo;
 }
 
@@ -324,14 +324,14 @@ body {
 
     #home h1 {
         font-size: 74px;
-        line-height: 9vh;
+        line-height: 0.9em;
         grid-area: top-content;
         margin: auto 0 2vh 7vw;
     }
 
     #home p {
         font-size: 19px;
-        line-height: 3vh;
+        line-height: 1.3em;
         grid-area: bot-content;
         margin: 2vh 7vw auto 7vw;
     }
